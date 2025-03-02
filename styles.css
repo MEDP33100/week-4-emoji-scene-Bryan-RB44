@@ -1,4 +1,4 @@
-span.train {
-    display: inline;
+.trainMove {
+    /* span already makes the element an inline element */
     font-size: 500%;
 }
