@@ -1,4 +1,14 @@
-.trainMove {
+.trainThing {
+    /* span already makes the element an inline element */
+    font-size: 500%;
+}
+
+.mountainThing {
+    /* span already makes the element an inline element */
+    font-size: 500%;
+}
+
+.cloudThing {
     /* span already makes the element an inline element */
     font-size: 500%;
 }
