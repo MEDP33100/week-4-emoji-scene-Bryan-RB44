@@ -1,14 +1,30 @@
 .trainThing {
     /* span already makes the element an inline element */
     font-size: 500%;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    width: 100%;
 }
 
 .mountainThing {
     /* span already makes the element an inline element */
     font-size: 500%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .cloudThing {
     /* span already makes the element an inline element */
     font-size: 500%;
+    margin-top: 1%;
+}
+
+.treeThing {
+    font-size: 350%;
+    margin-top: 1%;
+}
+
+.grassThing {
+    font-size: 150%;
 }
