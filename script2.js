@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     //Animation for the cloud
     gsap.fromTo(".cloudThing", 
-        { opacity: 0, x: 0 },
-        { opacity: 1, x: "100vw", duration: 10, repeat: -1, ease: "none" }
+        {x: -20 },
+        {x: "100vw", duration: 20, repeat: -1, ease: "none" }
     );
 
     //Animation for the trees
@@ -31,25 +31,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         { x: -100 },
         { x: "100vw", duration: 4.5, repeat: -1, ease: "linear" }
     );
-
-    //Animation for several clouds
-    const nubeBox = document.body;
-    for (let i = 0; i < 4; i++) {
-        const nube = document.createElement("p");
-        nube.className = "cloudThing";
-        nube.textContent = "☁️";
-        nube.style.position = "absolute";
-        //NOTE: "$" allows math expressions inside strings.
-        //Math.random() chooses a number between 0 and 1, the rest is self explanatory.
-        nube.style.top = `${Math.random() * 15}vh`;
-        nube.style.left = `${Math.random() * 5}vw`;
-        nubeBox.appendChild(nube);
-
-        gsap.fromTo(nube,
-            { opacity: 0, x: -200 },
-            { opacity: 1, x: "100vw", duration: 5 + Math.random() * 5, repeat: -1, ease: "none" }
-        );
-    }
 
     //Animation for grassy patches
     const grassPatch = document.body;
@@ -65,6 +46,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.fromTo(grass,
             { x: -100 },
             { x: "100vw", duration: 4.5, repeat: -1, ease: "linear" }
+        );
+    }
+
+    //Animation for several stars
+    const starBox = document.body;
+    for (let i = 0; i < 4; i++) {
+        const star = document.createElement("p");
+        star.className = "starThing";
+        star.textContent = "✨";
+        star.style.position = "absolute";
+        star.style.zIndex = -1;
+        //NOTE: "$" allows math expressions inside strings.
+        //Math.random() chooses a number between 0 and 1, the rest is self explanatory.
+        star.style.top = `${Math.random() * 15}vh`;
+        star.style.left = `${Math.random() * 5}vw`;
+        starBox.appendChild(star);
+
+        gsap.fromTo(star,
+            {x: -200 },
+            {x: "100vw", duration: 5 + Math.random() * 5, repeat: -1, ease: "none" }
         );
     }
 });

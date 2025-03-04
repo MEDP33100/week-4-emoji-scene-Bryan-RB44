@@ -8,14 +8,17 @@
 }
 
 .mountainThing {
-    /* span already makes the element an inline element */
     font-size: 500%;
     margin-top: 1%;
     margin-bottom: 1%;
 }
 
 .cloudThing {
-    /* span already makes the element an inline element */
+    font-size: 500%;
+    margin-top: 1%;
+    z-index: 10;
+}
+.starThing {
     font-size: 500%;
     margin-top: 1%;
 }
@@ -27,4 +30,22 @@
 
 .grassThing {
     font-size: 150%;
+}
+
+/* Alt-HTML Page */
+.obscuro {
+    background-color: black;
+}
+
+/* Link Shenanigans */
+.nightMode {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.dayMode {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
 }
